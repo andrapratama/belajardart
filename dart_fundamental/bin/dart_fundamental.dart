@@ -11,7 +11,8 @@ void main(List<String> arguments) {
   // numbers();
   // strings();
   // booleans();
-  operators();
+  // operators();
+  exceptions();
 }
 
 comments() {
@@ -207,4 +208,58 @@ Output:
   2 kurang dari 3, tapi 2 + 4 tidak sama dengan 5, maka ini akan tampil
   Ada satu nilai true
 */
+}
+
+exceptions() {
+  /*
+  var a = 7;
+  var b = 0;
+  print(a ~/ b);
+  ini akan mengkasilkan error jika tidak pakai exception
+  */
+
+  try {
+    var a = 7;
+    var b = 0;
+    print(a ~/ b);
+  } on IntegerDivisionByZeroException {
+    print('Can not divide by zero.');
+  }
+
+  // Untuk menangani exception yang tidak diketahui secara spesifik
+  try {
+    var a = 7;
+    var b = 0;
+    print(a ~/ b);
+  } catch (e) {
+    print('Exception happened: $e');
+  }
+
+/*
+Selain itu, kita juga dapat menambahkan satu parameter lagi di dalam catch yang merupakan objek stack trace. 
+Dari stack trace ini kita bisa melihat detail exception dan di baris mana exception tersebut terjadi.
+*/
+  try {
+    var a = 7;
+    var b = 0;
+    print(a ~/ b);
+  } catch (e, s) {
+    print('Exception happened: $e');
+    print('Stack trace: $s');
+  }
+
+  /*
+  Selain try, on, dan catch, ada satu blok lagi yang ada dalam mekanisme exception handling, yaitu finally. 
+  Blok finally akan tetap dijalankan tanpa peduli apa pun hasil yang terjadi pada blok try-catch.
+  */
+  try {
+    var a = 7;
+    var b = 0;
+    print(a ~/ b);
+  } catch (e, s) {
+    print('Exception happened: $e');
+    print('Stack trace: $s');
+  } finally {
+    print('This line still executed');
+  }
 }
