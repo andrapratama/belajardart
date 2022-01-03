@@ -1,8 +1,7 @@
 import 'package:dart_fundamental/dart_fundamental.dart' as dart_fundamental;
 import 'dart:io';
 
-/// Fungsi [main] akan menampilkan 2 output
-/// Output pertama menampilkan teks dan output kedua menampilkan hasil perkalian pada library [dart_fundamental]
+/// Fungsi [main] ini dengan komentar referensi
 void main(List<String> arguments) {
   // comments();
   // variables();
@@ -34,36 +33,36 @@ variables() {
   var greetings = 'Hello Dart!';
   print(greetings);
 
-  var myAge = 20;
+  var myAge = 27;
   print(myAge);
 
   var myAge2;
-  myAge2 = 20;
+  myAge2 = 27;
   print(myAge2);
 
-  int age = 20; //mendaklarasikan angka
-  String name = 'John Doe'; //mendaklarasikan string
+  int age = 27; //mendaklarasikan angka
+  String name = 'Andra Pratama'; //mendaklarasikan string
   bool isMale = true; // mendaklarasikan Boolean
-  double height = 168.8; // mendaklarasikan Double
+  double height = 167.8; // mendaklarasikan Double
 
   print(age);
 
   // Final type
-  const data = 'This is final data';
-  final gender = 'Male';
+  const data = 'ini data final';
+  final gender = 'Laki-Laki';
 
   // Common variable
   var country = 'Indonesia';
 
   //  List is synomym with an Array
-  var list = [1, 2, 3];
+  var list = [1, 2, 3, 4];
 
 //  Maps is synomym with an Object
   var profile = {
     // A map literal
     // Keys       Values
-    'firstName': 'zidni',
-    'lasNam': 'ridwan nulmuarif',
+    'firstName': 'andra',
+    'lastName': 'satria pratama',
     'gender': 'male'
   };
 // Print here for test the variables
@@ -82,11 +81,11 @@ datatypes() {
 }
 
 inputpengguna() {
-  stdout.write('Nama Anda : ');
+  stdout.write('Nama : ');
   String name = stdin.readLineSync()!;
-  stdout.write('Usia Anda : ');
+  stdout.write('Usia : ');
   int age = int.parse(stdin.readLineSync()!);
-  print('Halo $name, usia Anda $age tahun');
+  print('Hai $name, usia Anda $age tahun');
 }
 
 numbers() {
@@ -118,10 +117,10 @@ strings() {
   */
   print('"I think it\'s great!" I answered confidently');
   print("Windows path: C:\\Program Files\\Dart");
-  var name = 'Messi';
-  print('Hello $name, nice to meet you.');
+  var name = 'Andra';
+  print('Hi $name, nice to meet you.');
   print('1 + 1 = ${1 + 1}');
-  print(r'Dia baru saja membeli komputer seharga $1,000.00');
+  print(r'Dia beli laptop harganya $1,000.00');
 
   print('Hi \u2665');
 
